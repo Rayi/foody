@@ -130,6 +130,7 @@
   margin: 0;
 }
 .cart .total {
+  margin: 6px 0 0;
   font-size: 18px;
   color: #666;
   text-align: right;
