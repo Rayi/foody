@@ -1,0 +1,255 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.banner ul {
+  list-style: none;
+  width: 300%;
+  margin: 0;
+  padding: 0;
+}
+.banner li {
+  list-style: none;
+}
+.banner ul li {
+  float: left;
+}
+.sidemenu {
+  background: #f9f9f9;
+  border: 1px solid #bfbebe;
+  border-top: none;
+  height: 300px;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.08);
+}
+.sidemenu h3 {
+  display: none;
+}
+.sidemenu dl {
+  margin: 10px 0;
+}
+.sidemenu dl dt {
+  color: #434343;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 28px;
+}
+.sidemenu dl dd {
+  padding: 0 0 10px;
+}
+.sidemenu dl dd a {
+  display: inline-block;
+  color: #34940f;
+  line-height: 20px;
+  margin: 0 12px 0 0;
+}
+.recommend {
+  padding-top: 10px;
+  height: 290px;
+  overflow: hidden;
+}
+.recommend h3 {
+  display: none;
+}
+.special {
+  background: #fdf9e5;
+  padding: 0 10px;
+  margin: 10px 0 0;
+  height: 290px;
+}
+.special h3 {
+  color: #eb7c22;
+  font-size: 18px;
+  line-height: 36px;
+  margin: 6px 0;
+  padding: 5px 0 0;
+}
+.special p {
+  color: #eb7c22;
+  line-height: 20px;
+}
+.special .thumb {
+  width: 100%;
+  overflow: hidden;
+}
+.special .add-to-cart {
+  padding: 8px;
+  background: #f1884e;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+}
+.cart {
+  background: #f6fff2;
+  padding: 0 10px;
+  margin: 10px 0 0;
+  height: 290px;
+}
+.cart h3 {
+  color: #34940f;
+  font-size: 18px;
+  line-height: 36px;
+  margin: 6px 0;
+  padding: 5px 0 0;
+}
+.cart ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 160px;
+  overflow: auto;
+}
+.cart ul li {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 5px;
+  color: #666666;
+}
+.cart ul .name {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+  width: 190px;
+}
+.cart ul .price {
+  display: inline-block;
+  width: 60px;
+  text-align: right;
+}
+.cart ul input[type=text] {
+  width: 40px;
+  height: 20px;
+  text-align: center;
+}
+.cart p {
+  margin: 0;
+}
+.cart .total {
+  font-size: 18px;
+  color: #666;
+  text-align: right;
+}
+.cart .total strong {
+  font-size: 24px;
+  color: #d0520d;
+  font-weight: normal;
+}
+.cart .cart-charge {
+  display: inline-block;
+  padding: 8px;
+  background: #44b419;
+  border: none;
+  font-size: 14px;
+  color: #ffffff;
+}
+.foods {
+  margin: 10px 0;
+}
+.foods .submenu {
+  border-bottom: 1px solid #d4d4d4;
+  height: 39px;
+}
+.foods .submenu a {
+  display: inline-block;
+  color: #353434;
+  font-size: 16px;
+  line-height: 40px;
+  margin: 0 20px;
+}
+.foods .submenu a.actived {
+  color: #d96105;
+  line-height: 34px;
+  border-bottom: 3px solid #d96105;
+}
+.foods .food-list {
+  padding: 10px;
+  background: #f7f7f7;
+}
+.foods .food-list .food-item {
+  float: left;
+  width: 33.3%;
+}
+.foods .food-list .food-item .inner {
+  padding: 0 10px 0 168px;
+  position: relative;
+  border: 1px solid #d4d4d4;
+  height: 150px;
+  margin: 10px;
+  background: #fff;
+}
+.foods .food-list .food-item .inner img {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 136px;
+  height: 90px;
+}
+.foods .food-list .food-item .inner h4 {
+  color: #318d09;
+  font-weight: normal;
+  line-height: 32px;
+  margin: 6px 0 0;
+  padding: 0;
+}
+.foods .food-list .food-item .inner .price {
+  color: #d52121;
+  font-size: 14px;
+}
+.foods .food-list .food-item .inner .add-to-cart {
+  position: absolute;
+  left: 10px;
+  top: 110px;
+  display: block;
+  width: 136px;
+  padding: 3px;
+  background: #44b419;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+}
+.foods .food-list .new-item .inner {
+  background: #ffffff url(/static/images/new.png) no-repeat right top;
+}
+.foods .food-list::after {
+  display: block;
+  clear: both;
+  content: '.';
+  overflow: hidden;
+  height: 0;
+}
+.service-time h3,
+.service-area h3,
+.service-map h3 {
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: normal;
+  border-bottom: 1px solid #d4d4d4;
+  color: #333;
+}
+.service-time p,
+.service-area p,
+.service-map p {
+  color: #666666;
+  line-height: 20px;
+}
+.service-time .workday,
+.service-area .workday,
+.service-map .workday {
+  color: #c35e0d;
+}
+.service-time .weekend,
+.service-area .weekend,
+.service-map .weekend {
+  color: #308605;
+}
+.copyrights {
+  color: #999999;
+  text-align: right;
+  font-size: 12px;
+  padding-top: 20px;
+}
