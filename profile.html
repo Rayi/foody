@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>南方味道-个人中心</title>
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/index.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="header col-md-12">
+                <div class="logo"></div>
+                <div class="profile"></div>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="container">
+            <div class="row">
+                <a href="#">首页</a>
+                <a href="#">订餐</a>
+                <a href="#">积分</a>
+                <a href="#">会员</a>
+                <a href="#">指南</a>
+                <a href="#">反馈</a>
+                <a href="#">关于</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container profile">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="signup">
+                    <h3>我的信息</h3>
+                    <div class="form-group">
+                        <label>姓名</label>
+                        <input type="text" placeholder="张先生" /> <a href="#" class="send-code">修改</a>
+                    </div>
+                    <div class="form-group">
+                        <label>密码</label>
+                        <input type="text" placeholder="*******" /> <a href="#" class="send-code">修改</a>
+                    </div>
+                    <div class="form-group">
+                        <label>手机号</label>
+                        <input type="text" placeholder="13910081008" />
+                    </div>
+                    <div class="form-group">
+                        <label>地址1</label>
+                        <input type="text" placeholder="北京市海淀区清华园东大街36号" /> <a href="#" class="send-code">修改</a>
+                    </div>
+                    <div class="form-group">
+                        <label>地址2</label>
+                        <input type="text" placeholder="北京市海淀区清华园东大街36号" /> <a href="#" class="send-code">修改</a>
+                    </div>
+                    <div class="signup-btn">添加新地址</div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="signup">
+                    <h3>历史订单</h3>
+                    <select>
+                        <option value="">最近1个月</option>
+                        <option value="">最近3个月</option>
+                        <option value="">全部</option>
+                    </select>
+                    <table class="data-sheet">
+                        <thead>
+                            <tr>
+                                <th>日期</th>
+                                <th>订单号</th>
+                                <th>订单金额</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2013-12-28 
+17:36:39</td>
+                                <td>945053418</td>
+                                <td>￥59.00</td>
+                                <td>
+                                    <a href="">查看</a>|<a href="">删除</a>|<a href="">晒单</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2013-12-26 
+17:36:39</td>
+                                <td>945053218</td>
+                                <td>￥26.00</td>
+                                <td>
+                                    <a href="">查看</a>|<a href="">删除</a>|<a href="">晒单</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="service-area col-md-4">
+                <h3>送餐范围</h3>
+                <p>五环以内,一份起送(不含南四环的地区)，单笔消费金额在50元以内，电话订餐
+    收取4元送餐费，网络订餐收取3元送餐费，手机APP订餐收取2元送餐费,公司
+    承诺，四环以内半小时送到，四环至五环之间45分钟送到，超时免收送餐费；
+    五环外1小时以上送到，另外南四环外和五环外部分区域统一收6元送餐费！</p>
+            </div>
+
+            <div class="service-map col-md-4">
+                <h3>送餐地图</h3>
+                <p><img src="/static/images/tmp/map.jpg" alt="送餐地图" /></p>
+            </div>
+
+            <div class="service-time col-md-4">
+                <h3>配送时间</h3>
+                <p class="workday">周一至周五<br />
+    早上 10:00-13:00 下午 17:00-19:00</p>
+                <p class="weekend">周六至周日<br />
+    早上 10:00-13:00 下午 17:00-20:00</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="copyrights col-md-12">
+                <p>滇南味道美食共享有限公司提供. @2014-2014</p>
+            </div>
+        </div>
+    </div>
+<script type="text/template" id="food-item-tpl">
+    {@each list as item,index}
+    <div class="food-item new-item">
+        <div class="inner">
+            <img src="${item.thumb}/thumb.jpg" />
+            <h4>${item.name}</h4>
+            <p class="price">￥${item.price}.00 / 份</p>
+            <p>套餐包括：<br />${item.desc}</p>
+            <div class="add-to-cart">加入餐车</div>
+        </div>
+    </div>
+    {@/each}
+</script>
+    <script src="http://cdn.staticfile.org/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/twitter-bootstrap/3.0.3/js/bootstrap.js"></script>
+    <script src="http://unslider.com/unslider.js"></script>
+    <script type="text/javascript" src="static/js/common.js"></script>
+    <script type="text/javascript" src="static/js/juicer-min.js"></script>
+    <script type="text/javascript" src="static/js/index.js"></script>
+</body>
+</html>
