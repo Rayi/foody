@@ -255,12 +255,11 @@
   padding-top: 20px;
 }
 .profile {
-  width: 100%;
   background: #707e5f;
   background: #bb6446;
+  background: #f1f1f1;
 }
 .sign-up {
-  width: 100%;
   background: url(/static/images/tmp/bg.jpg) no-repeat left 0, url(/static/images/tmp/bg2.jpg) repeat-x 0 0;
 }
 .signup {
@@ -276,7 +275,7 @@
   font-size: 22px;
 }
 .signup .form-group {
-  margin: 10px 25px;
+  margin: 6px 25px;
 }
 .signup .form-group label {
   display: inline-block;
@@ -289,7 +288,7 @@
   line-height: 40px;
 }
 .signup .form-group input {
-  width: 280px;
+  width: 220px;
   box-sizing: border-box;
   padding: 8px 5px;
   line-height: 24px;
@@ -307,7 +306,8 @@
   height: 40px;
   line-height: 40px;
 }
-.signup .signup-btn {
+.signup .signup-btn,
+.signup .signin-btn {
   display: inline-block;
   padding: 0 20px;
   background: #44b419;
@@ -317,6 +317,14 @@
   height: 40px;
   line-height: 40px;
   margin: 0 0 10px 90px;
+}
+.signup .signup-btn {
+  background: #bb5c46;
+  margin-left: 10px;
+}
+.signup .confirm-signup {
+  margin-left: 90px;
+  background: #44b419;
 }
 .data-sheet {
   background: #fff;
