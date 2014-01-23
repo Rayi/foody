@@ -14,16 +14,20 @@ class CSmarty extends Smarty {
     const DIR_SEP = DIRECTORY_SEPARATOR;
     function __construct() {
         parent::__construct();
+
         $this -> template_dir = SMARTY_VIEW_DIR. self::DIR_SEP . 'templates';
         $this -> compile_dir = SMARTY_VIEW_DIR . self::DIR_SEP . 'template_c';
-        $this -> caching = true;
         $this -> cache_dir = SMARTY_VIEW_DIR . self::DIR_SEP . 'cache';
-        $this -> left_delimiter = '<%';
-        $this -> right_delimiter = '%>';
-        $this -> cache_lifetime = 0;
-        // -- 初始全局数据
-        $this -> assign('base_url', 'http://www.ttall.net');
-        $this -> assign('index_url', 'http://www.ttall.net/index.php');
+        $this -> config_dir = SMARTY_VIEW_DIR . self::DIR_SEP . 'smarty_config';
+
+        //$this->plugins_dir = array("./plugin/");
+        $this->left_delimiter = "{%";
+        $this->right_delimiter = "%}";
+
+
+        $this->cache_dir = "cache";
+        $this->caching = false;
+        $this->cache_lifetime = '60';
     }
     function init() {
     }

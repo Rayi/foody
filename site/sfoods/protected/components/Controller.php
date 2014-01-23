@@ -28,7 +28,7 @@ class Controller extends CController
 	 *
 	 */
 	public function assign($key, $value) {
-		Yii::app() -> smarty -> assign($key, $value);
+		Yii::app()->smarty->assign($key, $value);
 	}
 
 	/**
@@ -36,6 +36,6 @@ class Controller extends CController
 	 *
 	 */
 	public function display($view) {
-		Yii::app() -> smarty -> display($view);
+		Yii::app()->smarty->display($view);
 	}
 }

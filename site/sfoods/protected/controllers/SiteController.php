@@ -12,7 +12,6 @@ class SiteController extends Controller
 	{
         $this->assign("name", "leiyi");
 
-		echo 'Hello World';
-        $this->display('pms/page/index.tpl');
+        $this->display('home/page/index.tpl');
 	}
 }

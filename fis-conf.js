@@ -21,7 +21,7 @@ fis.config.merge({
             },
             {
                 //前面规则未匹配到的其他文件
-                reg : /_grunt/,
+                reg : /_grunt|site|output/,
                 //编译的时候不要产出了
                 release : false
             }

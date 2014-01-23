@@ -3,3 +3,5 @@ protected/runtime/
 themes/classic/views/
 node_modules/
 output/
+template_c/
+cache/

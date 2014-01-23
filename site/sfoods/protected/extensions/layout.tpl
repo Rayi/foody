@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/static/css/index.css" />
 </head>
 <body>
-    {%include 'common/page/header.tpl'%}
+    {%include 'header.tpl'%}
     <div class="container">
         <div class="row">
             <!-- <div class="sidemenu col-md-1">
