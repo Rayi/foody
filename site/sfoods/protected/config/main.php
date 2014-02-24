@@ -28,10 +28,13 @@ return array(
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
+				'profile' => 'account/profile',
+				'list' => 'home/list',
 				'<controller:\w+>' => '<controller>/index',
 				'<controller:\w+>/view/<id:\d+>' => '<controller>/view',
 				'<controller:\w+>/edit/<id:\d+>' => '<controller>/edit',
 				'<controller:\w+>/new' => '<controller>/new',
+
 				'user/<uid:\d+>' => 'user',
 				'user/<name:\w+>' => 'user',
 				'image/view/<id:\d+>/<w:\d+>/<h:\d+>' => 'image/view',
