@@ -1,6 +1,6 @@
 $.ajax({
-    url: 'http://weekend.duapp.com/api.php',
-    dataType: 'jsonp',
+    url: '/api/item/recommend',
+    dataType: 'json',
     success: function(retJson){
         console.log(retJson);
 

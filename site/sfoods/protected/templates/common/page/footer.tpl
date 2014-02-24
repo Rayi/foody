@@ -28,9 +28,26 @@
         </div>
     </div>
 </div>
-<script src="http://cdn.staticfile.org/jquery/1.9.1/jquery.min.js"></script>
-<script src="http://cdn.staticfile.org/twitter-bootstrap/3.0.3/js/bootstrap.js"></script>
-<script src="http://unslider.com/unslider.js"></script>
+<script type="text/javascript" src="static/js/sea-debug.js"></script>
+<script type="text/javascript" src="static/js/jquery.min.js"></script>
+<script type="text/javascript" src="static/js/bootstrap.js"></script>
+<script type="text/javascript" src="static/js/unslider.js"></script>
 <script type="text/javascript" src="static/js/common.js"></script>
 <script type="text/javascript" src="static/js/juicer-min.js"></script>
 <script type="text/javascript" src="static/js/index.js"></script>
+
+<script>
+// seajs 的简单配置
+seajs.config({
+  // 调试模式
+  debug: true,
+  base: "/static/sea-modules/",
+  alias: {
+    "eventproxy": "/static/sea-modules/eventproxy.js",
+    "jquery": "jquery/jquery/1.10.1/jquery.js"
+  }
+})
+
+// 加载入口模块
+seajs.use("/static/js/main");
+</script>

@@ -21,6 +21,16 @@ class Controller extends CController
 	 */
 	public $breadcrumbs=array();
 
+	protected $request=null;
+	protected $curl = null;
+
+
+	public function init()
+    {
+    	$this->request = Yii::app()->request;
+    	$this->curl = new FetchUrl();
+    	
+    }
 
 
 	/**

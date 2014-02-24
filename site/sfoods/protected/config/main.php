@@ -15,6 +15,10 @@ return array(
 		'application.extensions.smarty.sysplugins.*',
 	),
 
+	'modules'=>array(
+        'api',
+	),
+
 	// application components
 	'components'=>array(
 		'db'=>array(
@@ -35,6 +39,7 @@ return array(
 				'profile' => 'account/profile',
 				'signup' => 'account/signup',
 				'signin' => 'account/signin',
+				'getpw' => 'account/getpw',
 				'getpw' => 'account/getpw',
 
 				'<controller:\w+>' => '<controller>/index',
