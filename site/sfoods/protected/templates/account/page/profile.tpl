@@ -1,0 +1,73 @@
+{%extends file="common/page/layout.tpl"%}
+{%block name="content"%}
+<div class="container profile">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="signup">
+                <h3>我的信息</h3>
+                <div class="form-group">
+                    <label>姓名</label>
+                    <input type="text" placeholder="张先生" /> <a href="#" class="send-code">修改</a>
+                </div>
+                <div class="form-group">
+                    <label>密码</label>
+                    <input type="text" placeholder="*******" /> <a href="#" class="send-code">修改</a>
+                </div>
+                <div class="form-group">
+                    <label>手机号</label>
+                    <input type="text" placeholder="13910081008" />
+                </div>
+                <div class="form-group">
+                    <label>地址1</label>
+                    <input type="text" placeholder="北京市海淀区清华园东大街36号" /> <a href="#" class="send-code">修改</a>
+                </div>
+                <div class="form-group">
+                    <label>地址2</label>
+                    <input type="text" placeholder="北京市海淀区清华园东大街36号" /> <a href="#" class="send-code">修改</a>
+                </div>
+                <div class="signup-btn">添加新地址</div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="signup">
+                <h3>历史订单</h3>
+                <select>
+                    <option value="">最近1个月</option>
+                    <option value="">最近3个月</option>
+                    <option value="">全部</option>
+                </select>
+                <table class="data-sheet">
+                    <thead>
+                        <tr>
+                            <th>日期</th>
+                            <th>订单号</th>
+                            <th>订单金额</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2013-12-28 
+17:36:39</td>
+                            <td>945053418</td>
+                            <td>￥59.00</td>
+                            <td>
+                                <a href="">查看</a>|<a href="">删除</a>|<a href="">晒单</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2013-12-26 
+17:36:39</td>
+                            <td>945053218</td>
+                            <td>￥26.00</td>
+                            <td>
+                                <a href="">查看</a>|<a href="">删除</a>|<a href="">晒单</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{%/block%}
