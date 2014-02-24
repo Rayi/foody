@@ -28,8 +28,15 @@ return array(
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
-				'profile' => 'account/profile',
+				
 				'list' => 'home/list',
+				'about' => 'home/about',
+
+				'profile' => 'account/profile',
+				'signup' => 'account/signup',
+				'signin' => 'account/signin',
+				'getpw' => 'account/getpw',
+
 				'<controller:\w+>' => '<controller>/index',
 				'<controller:\w+>/view/<id:\d+>' => '<controller>/view',
 				'<controller:\w+>/edit/<id:\d+>' => '<controller>/edit',

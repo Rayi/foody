@@ -24,4 +24,15 @@ class HomeController extends Controller
 
         $this->display('home/page/list.tpl');
     }
+
+
+    /**
+     * Index action is the default action in a controller.
+     */
+    public function actionAbout()
+    {
+        $this->assign("name", "leiyi");
+
+        $this->display('home/page/about.tpl');
+    }
 }
