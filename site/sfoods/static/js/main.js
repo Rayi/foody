@@ -15,10 +15,10 @@ define(function(require, exports, module) {
 
     $('body').on('click', '.add-to-cart', function(){
         console.log(123,ep);
-        ep.emit('food.addtocart', $(this));
+        ep.emit('food.addtocart', $(this).data('id'));
     });
 
 
-    items.getAll();
+    items.getRecommend();
 
 });

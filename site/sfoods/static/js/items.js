@@ -1,6 +1,6 @@
 define(function(require, exports, module){
     
-    var items;
+    var items = [];
     exports.getAll = function(){
         $.ajax({
             url: '/api/item/recommend',
@@ -29,6 +29,7 @@ define(function(require, exports, module){
             success: function(retJson){
                 console.log(retJson);
                 if(retJson.status == 1) {
+                    items = retJson.data;
                     var data = retJson.data;
                     var tpl = $('#food-item-tpl').html();
                     console.log(tpl);
@@ -40,5 +41,14 @@ define(function(require, exports, module){
                 }
             }
         });
+    }
+
+    exports.getItemById = function(id){
+
+        for(var i = 0; i < items.length; i++) {
+            if(items[i].id == id) {
+                return items[i]
+            }
+        }
     }
 });

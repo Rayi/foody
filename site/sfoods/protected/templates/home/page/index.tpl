@@ -44,40 +44,23 @@
         <div class="col-md-4">
             <div class="cart">
                 <h3>我的餐车</h3>
-                <ul>
-                    <li>
-                        <span class="name">红绍肉套餐</span>
-                        <span class="price">￥12.00</span> x <input type="text" value="1" />
-                    </li>
-                    <li>
-                        <span class="name">青椒肉丝套餐</span>
-                        <span class="price">￥12.00</span> x <input type="text" value="1" />
-                    </li>
-                    <li>
-                        <span class="name">红绍肉单点</span>
-                        <span class="price">￥8.00</span> x <input type="text" value="3" />
-                    </li>
-                    <li>
-                        <span class="name">肉末酥红豆(单点)</span>
-                        <span class="price">￥10.00</span> x <input type="text" value="2" />
-                    </li>
-                    <li>
-                        <span class="name">青椒肉丝套餐</span>
-                        <span class="price">￥12.00</span> x <input type="text" value="1" />
-                    </li>
-                    <li>
-                        <span class="name">红绍肉单点</span>
-                        <span class="price">￥8.00</span> x <input type="text" value="3" />
-                    </li>
-                    <li>
-                        <span class="name">肉末酥红豆(单点)</span>
-                        <span class="price">￥10.00</span> x <input type="text" value="2" />
-                    </li>
+                <ul id="home-cart-list">
                 </ul>
                 <div class="total">
-                    <p><span>总计: <strong>68.00</strong>元</span></p>
+                    <p><span>总计: <strong id="home-total-price">68.00</strong>元</span></p>
                     <div><input class="cart-charge" type="button" value="选好了，去结算！" onclick="document.location = 'cart.html'" /></div>
                 </div>
+                <script type="text/tpl" id="cart-list-tpl">
+                {@if list.length === 0}
+                    <li> 购物车里还没有食物，赶紧选购吧！</li>
+                {@/if}
+                {@each list as item,index}
+                <li>
+                    <span class="name">${item.name}</span>
+                    <span class="price">￥${item.price}.00</span> x <input type="text" value="${item.count}" />
+                </li>
+                {@/each}
+                </script>
             </div>
         </div>
     </div>
