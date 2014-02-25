@@ -9,10 +9,16 @@ define(function(require, exports, module) {
     console.log('seajs run');
 
 
+
+    var items = require('./items');
+
+
     $('body').on('click', '.add-to-cart', function(){
         console.log(123,ep);
         ep.emit('food.addtocart', $(this));
     });
 
+
+    items.getAll();
 
 });

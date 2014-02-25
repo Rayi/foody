@@ -34,7 +34,6 @@
 <script type="text/javascript" src="static/js/unslider.js"></script>
 <script type="text/javascript" src="static/js/common.js"></script>
 <script type="text/javascript" src="static/js/juicer-min.js"></script>
-<script type="text/javascript" src="static/js/index.js"></script>
 
 <script>
 // seajs 的简单配置
