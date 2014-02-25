@@ -48,4 +48,83 @@ class Controller extends CController
 	public function display($view) {
 		Yii::app()->smarty->display($view);
 	}
+
+
+
+
+	public function _return($status, $msg = '', $data = array()) {
+        $callback = $this->_getParam('callback', '');
+        if($callback !== "") {
+            echo $callback.'('.json_encode(array(
+                "status" => $status,
+                "msg" => $msg,
+                "data" => $data,
+            )).');';
+        } else {
+            echo json_encode(array(
+                "status" => $status,
+                "msg" => $msg,
+                "data" => $data,
+            ));
+        }
+        exit();
+    }
+
+    public function _toArray($activeRecord) {
+        $ret = array();
+
+        if(is_object($activeRecord)) {
+            $item = array();
+            foreach($activeRecord as $k => $v) {
+                $item[$k] = $v;
+            }
+            $ret = $item;
+        } else {
+            if(is_array($activeRecord)) {
+                foreach($activeRecord as $ar) {
+                    $item = array();
+                    foreach($ar as $k => $v) {
+                        $item[$k] = $v;
+                    }
+                    $ret[] = $item;
+                }
+            }
+        }
+        return $ret;
+    }
+
+    public function toArray($activeRecord) {
+        $this->_dump($activeRecord);
+    }
+
+    public function _dump($data = array()){
+        if(func_num_args() > 1) {
+            $data = func_get_args();
+        }
+        echo "<pre>";
+        var_dump($data);
+        echo '</pre>';
+    }
+
+    public function dump($data = array()){
+        $this->_dump($data);
+    }
+
+    protected function _getParam($key = "", $default = ""){
+        
+        if($key == "") {
+            return "";
+        }
+
+        $value = $this->request->getParam($key);
+        if(is_null($value) || $value === "") {
+            return $default;
+        }
+        return is_array($value)?$value:trim($value);
+    }
+
+    protected function getParam($key = "", $default = ""){
+        
+        return $this->_getParam($key, $default);
+    }
 }

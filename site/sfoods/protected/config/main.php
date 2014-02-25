@@ -1,5 +1,5 @@
 <?php
-
+require_once dirname(__FILE__). '/config.php';
 // This is the main Web application configuration. Any writable
 // application properties can be configured here.
 return array(
@@ -22,7 +22,12 @@ return array(
 	// application components
 	'components'=>array(
 		'db'=>array(
-			'connectionString'=>'sqlite:protected/data/phonebook.db',
+			'class' => 'system.db.CDbConnection',
+			'connectionString' => DB_CONNECTION_STRING,
+			'emulatePrepare' => true,
+			'username' => DB_USER,
+			'password' => DB_PASS,
+			'charset' => 'utf8',
 		),
 
 		'smarty'=>array(

@@ -13,12 +13,14 @@ class ItemController extends Controller
 
     public function actionRecommend()
     {
-        $api_url = 'http://weekend.duapp.com/api.php';
+        // $api_url = 'http://weekend.duapp.com/api.php';
 
-        $api_path = $api_url;
+        // $api_path = $api_url;
 
-        $content = $this->curl->get($api_path);
+        // $content = $this->curl->get($api_path);
         
-        echo $content;
+        // echo $content;
+        $item_ars = Item::model()->findAll();
+        $this->_return(1, '', $this->_toArray($item_ars));
     }
 }
