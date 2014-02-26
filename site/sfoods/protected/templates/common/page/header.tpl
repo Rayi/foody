@@ -18,7 +18,7 @@
                 <a href="/about">关于</a>
 
                 <div class="my-cart-list">
-                    去餐车结算
+                    <a href="/cart">去餐车结算</a>
                     <span class="caret caret-right"></span>
                 </div>
             </div>

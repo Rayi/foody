@@ -1,22 +1,19 @@
 define(function(require, exports, module){
     
+    var ep = require('./ep');
+
     var items = [];
-    exports.getAll = function(){
+    exports.getAll = function(callback){
         $.ajax({
             url: '/api/item/recommend',
             dataType: 'json',
             success: function(retJson){
                 console.log(retJson);
                 if(retJson.status == 1) {
-                    items = retJson.data;
-                    var data = retJson.data;
-                    var tpl = $('#food-item-tpl').html();
-                    console.log(tpl);
-                    var compiled_tpl = juicer(tpl);
-                    console.log(compiled_tpl);
-                    console.log(compiled_tpl.render({list:data}));
-                    $('#food-list').html(compiled_tpl.render({list:data}));
 
+                    items = retJson.data;
+
+                    ep.emit('food.itemsLoaded');
                 }
             }
         });
@@ -29,15 +26,14 @@ define(function(require, exports, module){
             success: function(retJson){
                 console.log(retJson);
                 if(retJson.status == 1) {
-                    items = retJson.data;
+                    
                     var data = retJson.data;
                     var tpl = $('#food-item-tpl').html();
-                    console.log(tpl);
                     var compiled_tpl = juicer(tpl);
-                    console.log(compiled_tpl);
-                    console.log(compiled_tpl.render({list:data}));
+
                     $('#food-list').html(compiled_tpl.render({list:data}));
 
+                    ep.emit('food.recommendLoaded');
                 }
             }
         });
@@ -51,4 +47,6 @@ define(function(require, exports, module){
             }
         }
     }
+
+    exports.getAll();
 });

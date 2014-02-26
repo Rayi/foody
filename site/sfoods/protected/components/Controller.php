@@ -24,14 +24,25 @@ class Controller extends CController
 	protected $request=null;
 	protected $curl = null;
 
+    public $module_id = '';
+
 
 	public function init()
     {
     	$this->request = Yii::app()->request;
     	$this->curl = new FetchUrl();
-    	
-    }
 
+
+    	$controller = explode('/',Yii::app()->request->getParam('r'));
+        $controller_id = Yii::app()->controller->id;
+        $action_id = isset(Yii::app()->controller->action)?Yii::app()->controller->action->id:"";
+        $module_id = $controller_id;
+        if($action_id !== ""){
+            $module_id = $controller_id.'.'.$action_id;
+        }
+
+        $this->assign('module_id', $module_id);
+    }
 
 	/**
 	 * Smarty assign()方法

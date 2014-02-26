@@ -48,16 +48,16 @@
                 </ul>
                 <div class="total">
                     <p><span>总计: <strong id="home-total-price">68.00</strong>元</span></p>
-                    <div><input class="cart-charge" type="button" value="选好了，去结算！" onclick="document.location = 'cart.html'" /></div>
+                    <div><input class="cart-charge" type="button" value="选好了，去结算！" onclick="document.location = '/cart/'" /></div>
                 </div>
                 <script type="text/tpl" id="cart-list-tpl">
                 {@if list.length === 0}
                     <li> 购物车里还没有食物，赶紧选购吧！</li>
                 {@/if}
                 {@each list as item,index}
-                <li>
+                <li data-id="${item.id}">
                     <span class="name">${item.name}</span>
-                    <span class="price">￥${item.price}.00</span> x <input type="text" value="${item.count}" />
+                    <span class="price">￥${item.price}.00</span> x <span class="item-count">${item.count}</span> <span data-cmd="item-sub" class="btn btn-default">-</span><span data-cmd="item-add" class="btn btn-default">+</span>
                 </li>
                 {@/each}
                 </script>
@@ -73,7 +73,7 @@
                     <a href="">小菜饮品</a>
                 </div>
                 <div class="food-list" id="food-list">
-                    <div class="food-item new-item">
+                    <!-- <div class="food-item new-item">
                         <div class="inner">
                             <img src="/static/images/tmp/f_01.jpg" />
                             <h4>小炒香干</h4>
@@ -111,7 +111,7 @@
                             <p>套餐包括：<br />小炒香干+配菜+开胃菜+蒸蛋+靓汤</p>
                             <div class="add-to-cart">加入餐车</div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

@@ -28,14 +28,15 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="static/js/sea-debug.js"></script>
-<script type="text/javascript" src="static/js/jquery.min.js"></script>
-<script type="text/javascript" src="static/js/bootstrap.js"></script>
-<script type="text/javascript" src="static/js/unslider.js"></script>
-<script type="text/javascript" src="static/js/common.js"></script>
-<script type="text/javascript" src="static/js/juicer-min.js"></script>
+<script type="text/javascript" src="/static/js/sea-debug.js"></script>
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.js"></script>
+<script type="text/javascript" src="/static/js/unslider.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
+<script type="text/javascript" src="/static/js/juicer-min.js"></script>
 
 <script>
+console.log();
 // seajs 的简单配置
 seajs.config({
   // 调试模式
@@ -43,10 +44,11 @@ seajs.config({
   base: "/static/sea-modules/",
   alias: {
     "eventproxy": "/static/sea-modules/eventproxy.js",
-    "jquery": "jquery/jquery/1.10.1/jquery.js"
+    "jquery": "jquery/jquery/1.10.1/jquery.js",
+    "cookie": "arale/cookie/1.0.2/cookie.js"
   }
 })
 
 // 加载入口模块
-seajs.use("/static/js/main");
+seajs.use("/static/js/{%$module_id%}.main");
 </script>
