@@ -81,6 +81,14 @@ class Controller extends CController
         exit();
     }
 
+    public function error($errorCode = 400, $msg = '') {
+        $this->_return(FAILED, $msg, array('errCode'=>$errorCode));
+    }
+
+    public function success($errorCode = 400, $msg = '') {
+        $this->_return(SUCCESS, $msg, array('errCode'=>$errorCode));
+    }
+
     public function _toArray($activeRecord) {
         $ret = array();
 
@@ -105,7 +113,7 @@ class Controller extends CController
     }
 
     public function toArray($activeRecord) {
-        $this->_dump($activeRecord);
+        $this->_toArray($activeRecord);
     }
 
     public function _dump($data = array()){
@@ -113,7 +121,7 @@ class Controller extends CController
             $data = func_get_args();
         }
         echo "<pre>";
-        var_dump($data);
+        var_dump($this->toArray($data));
         echo '</pre>';
     }
 
