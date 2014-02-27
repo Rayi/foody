@@ -38,6 +38,12 @@ class CartController extends Controller
         $order->phone =  '13800138000';
         $order->contact ='雷毅';
         $order->memo = '{}';
+
+        $success = $order->save();
+
+        if($success !== true) {
+            $this->error(401, '添加订单失败!');
+        }
         
         
 
@@ -59,11 +65,7 @@ class CartController extends Controller
             }
         }
         $order->total = $total;
-        $success = $order->save();
-
-        if($success !== true) {
-            $this->error(401, '添加订单失败!');
-        }
+        $order->update();
 
         $this->_return(SUCCESS, '', $order->id);
     }

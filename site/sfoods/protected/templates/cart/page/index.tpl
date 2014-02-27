@@ -19,6 +19,13 @@
                             </tr>
                         </thead>
                         <tbody>
+                            {@if list.length === 0}
+                                <tr class="data-row">
+                                    <td colspan="4" class="text-center">
+                                        餐车里没有菜品，快去选购吧！
+                                    </td>
+                                </tr>
+                            {@/if}
                             {@each list as item, index}
                             <tr class="data-row" data-id="${item.id}">
                                 <td>${item.name}</td>
@@ -33,12 +40,11 @@
                     </table>
                     <div class="summary">
                         餐品价格总计： ￥${total}元<br />
-                        送餐费： ￥5.00 元
                     </div>
                     <div class="total">
                         总计： ￥${total} 元
 
-                        <div class="confirm-btn">确认信息</div>
+                        <div class="confirm-btn" data-cmd="create-order">下一步</div>
                     </div>
                 </script>
             </div>

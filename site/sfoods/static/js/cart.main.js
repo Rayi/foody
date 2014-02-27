@@ -31,6 +31,9 @@ define(function(require, exports, module) {
             var row_id = row.data('id');
 
             cart.add(row_id, 1);
+        },
+        "create-order": function(){
+            cart.order();
         }
     }
 
@@ -61,6 +64,10 @@ define(function(require, exports, module) {
 
     ep.on('cart.changed', function(){
         renderCart();
+    });
+
+    ep.on('cart.ordered', function(orderId){
+        document.location = '/cart/info?order_id=' + orderId;
     });
 
 });

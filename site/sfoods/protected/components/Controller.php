@@ -37,11 +37,31 @@ class Controller extends CController
         $controller_id = Yii::app()->controller->id;
         $action_id = isset(Yii::app()->controller->action)?Yii::app()->controller->action->id:"";
         $module_id = $controller_id;
+
+        
+    }
+
+    public function filterAdminOnly($filterChain){
+        $filterChain->run();
+    }
+
+    protected function beforeAction($action){
+        
+        $controller = explode('/',Yii::app()->request->getParam('r'));
+        $controller_id = Yii::app()->controller->id;
+        $action_id = isset(Yii::app()->controller->action)?Yii::app()->controller->action->id:"";
+
+        $module_id = $controller_id;
+        //$this->_dump($controller_id, $action_id, $action);
+
         if($action_id !== ""){
             $module_id = $controller_id.'.'.$action_id;
         }
 
         $this->assign('module_id', $module_id);
+
+        // this must return true if want continue action
+        return true;
     }
 
 	/**
@@ -113,7 +133,7 @@ class Controller extends CController
     }
 
     public function toArray($activeRecord) {
-        $this->_toArray($activeRecord);
+        return $this->_toArray($activeRecord);
     }
 
     public function _dump($data = array()){
@@ -121,7 +141,7 @@ class Controller extends CController
             $data = func_get_args();
         }
         echo "<pre>";
-        var_dump($this->toArray($data));
+        var_dump($data);
         echo '</pre>';
     }
 

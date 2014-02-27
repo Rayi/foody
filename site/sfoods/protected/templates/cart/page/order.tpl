@@ -5,18 +5,7 @@
         <div class="col-md-12">
             <div class="mycart">
                 <h3>核对订单信息</h3>
-                <dl>
-                    <dt>订餐人信息</dt>
-                    <dd>张先生 </dd>
-                    <dd>手机号： 13910081008</dd>
-                    <dd>送餐地址： 北京市海淀区东北旺西路8号中关村软件园2期文思海辉大厦</dd>
-                </dl>
 
-                <dl>
-                    <dt>发票信息</dt>
-                    <dd>普通餐饮类发票</dd>
-                </dl>
-                
                 <dl>
                     <dt>餐品信息</dt>
                     <dd>
@@ -30,36 +19,54 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                {%foreach $items as $food %}
                                 <tr>
-                                    <td>红烧肉套餐</td>
-                                    <td>￥20.00</td>
-                                    <td>1</td>
+                               
+                                    <td>{%$food['name']%}</td>
+                                    <td>￥{%$food['price']%}.00</td>
+                                    <td>{%$food['count']%}</td>
                                     <td>
-                                        ￥20.00
+                                        ￥{%$food['total']%}
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>麻婆豆腐套餐</td>
-                                    <td>￥20.00</td>
-                                    <td>2</td>
-                                    <td>
-                                        ￥40.00
-                                    </td>
-                                </tr>
+                                {%/foreach%}
                             </tbody>
                         </table>
                         <div class="summary">
-                            餐品价格总计： ￥238.00 元<br />
-                            送餐费： ￥5.00 元
+                            餐品价格总计： ￥{%$total_price%}.00 元<br />
+                            送餐费： ￥0.00 元
                         </div>
                     </dd>
                 </dl>
+
+                <dl>
+                    <dt>订餐人信息 [<span id="consignee-action"><a href="" data-cmd="edit-consignee">修改</a></span>]</dt>
+                    <dd id="consignee">
+                    </dd>
+                </dl>
+                <script type="text/tpl" id="consignee-edit-tpl">
+                    <p><label for="" style="display:inline-block;width:60px;">联系人：</label> <input id="consignee-contact" type="text" value="${contact}" style="width:100px" /> </p>
+                    <p><label for="" style="display:inline-block;width:60px;">手机号：</label> <input id="consignee-phone" type="text" value="${phone}" style="width:100px"  /></p>
+                    <p><label for="" style="display:inline-block;width:60px;">送餐地址：</label> <input id="consignee-place" type="text" value="${place}" style="width:400px"  /></p>
+                    <p><a href="" data-cmd="save-consignee" class="btn btn-success">保存订餐人信息</a></p>
+                </script>
+                <script type="text/tpl" id="consignee-tpl">
+                    ${contact} ${phone} <br />
+                    ${place}
+                </script>
+
+                <dl>
+                    <dt>发票信息</dt>
+                    <dd>普通餐饮类发票</dd>
+                </dl>
+                
+                
                 
                 
                 <div class="total">
-                    总计： ￥243.00 元
+                    总计： ￥{%$total_price%}.00 元
 
-                    <div class="confirm-btn">提交订单</div>
+                    <div class="confirm-btn" data-cmd="finish-order">提交订单</div>
                 </div>
                 
             </div>

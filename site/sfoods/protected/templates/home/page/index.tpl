@@ -47,7 +47,7 @@
                 <ul id="home-cart-list">
                 </ul>
                 <div class="total">
-                    <p><span>总计: <strong id="home-total-price">68.00</strong>元</span></p>
+                    <p><span>总计: <strong id="home-total-price">0</strong>元</span></p>
                     <div><input class="cart-charge" type="button" value="选好了，去结算！" onclick="document.location = '/cart/'" /></div>
                 </div>
                 <script type="text/tpl" id="cart-list-tpl">

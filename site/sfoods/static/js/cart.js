@@ -68,7 +68,12 @@ define(function(require, exports, module) {
     });
 
     ep.on('cart.changed', function(){
-        cookie.set('cart_item', JSON.stringify(cartItems));
+        cookie.set('cart_item', JSON.stringify(cartItems), {
+            domain: 'yiifood.com',
+            path: '/'
+        });
+
+        console.log(cartItems,JSON.stringify(cartItems),cookie.get('cart_item'));
     });
 
     // 从cookie获取购物车信息
@@ -123,5 +128,18 @@ define(function(require, exports, module) {
 
     exports.getListDetail = function(){
         return _getCartsItems();
+    }
+
+    exports.order = function() {
+        $.ajax({
+            url: '/api/cart/order',
+            dataType: "json",
+            success: function(ret){
+                if(ret.status === 0) {
+                    console.log(ret);
+                    ep.emit('cart.ordered', ret.data);
+                }
+            }
+        })
     }
 });
