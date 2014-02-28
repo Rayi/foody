@@ -46,7 +46,7 @@ class Controller extends CController
     }
 
     protected function beforeAction($action){
-        
+
         $controller = explode('/',Yii::app()->request->getParam('r'));
         $controller_id = Yii::app()->controller->id;
         $action_id = isset(Yii::app()->controller->action)?Yii::app()->controller->action->id:"";
@@ -102,11 +102,17 @@ class Controller extends CController
     }
 
     public function error($errorCode = 400, $msg = '') {
-        $this->_return(FAILED, $msg, array('errCode'=>$errorCode));
+        $this->_return(FAILURE, $msg, array('errCode'=>$errorCode));
     }
 
     public function success($errorCode = 400, $msg = '') {
         $this->_return(SUCCESS, $msg, array('errCode'=>$errorCode));
+    }
+
+
+    public function message($msg = '') {
+        $this->assign('msg', $msg);
+        $this->display('common/page/message.tpl');
     }
 
     public function _toArray($activeRecord) {

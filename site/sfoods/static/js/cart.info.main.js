@@ -30,8 +30,23 @@ define(function(require, exports, module) {
                 return;
             }
 
-            alert('提交成功！');
-            document.location = '/cart/finish';
+            $.ajax({
+                url: "/api/cart/submit",
+                dataType: "json",
+                data: {
+                    orderId: $('#order-id').val(),
+                    contact: consignee.contact,
+                    phone: consignee.phone,
+                    place: consignee.place
+                },
+                success: function(ret){
+                    if(ret.status === 0) {
+                        document.location = '/cart/finish?order_id=' + ret.data.id;
+                    }
+                    
+                }
+            })
+            
         },
         "save-consignee": function(){
             consignee.contact = $('#consignee-contact').val();

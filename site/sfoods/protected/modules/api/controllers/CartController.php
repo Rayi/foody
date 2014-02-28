@@ -69,4 +69,27 @@ class CartController extends Controller
 
         $this->_return(SUCCESS, '', $order->id);
     }
+
+    public function actionSubmit()
+    {   
+        $err = 0;
+        $total = 0;
+
+        $order_id = $this->getParam('orderId');
+        $contact = $this->getParam('contact');
+        $phone = $this->getParam('phone');
+        $place = $this->getParam('place');
+
+        $order = Orders::model()->findByPk($order_id);
+
+        if($order) {
+            $order->contact = $contact;
+            $order->phone = $phone;
+            $order->place = $place;
+            $order->status = 1;
+            $order->update();
+
+            $this->_return(SUCCESS, '', $this->toArray($order));
+        }
+    }
 }
