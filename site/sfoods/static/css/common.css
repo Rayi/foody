@@ -1,3 +1,198 @@
+/* 基础颜色定义 */
+/* 提示文字颜色 */
+/* 链接颜色定义 */
+/* 边框颜色 */
+/* 背景色定义 */
+/* 按钮颜色定义 */
+/* 导航颜色定义 */
+/* 基础样式 */
+@-webkit-keyframes circleEndless {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+body {
+  font-size: 12px;
+  color: #333333;
+  line-height: 1.5;
+  font-family: Tahoma, 'Microsoft Yahei';
+}
+/*
+ * 清楚浮动样式定义 
+ */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  display: inline-table;
+}
+/* Hides from IE-mac \*/
+* html .clearfix {
+  height: 1%;
+}
+.clearfix {
+  display: block;
+}
+/* End hide from IE-mac */
+.circless {
+  -webkit-animation-name: circleEndless;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+}
+/*
+ * 基础UI样式和动画定义
+ */
+a {
+  color: #333333;
+}
+a:hover {
+  text-decoration: underline;
+  color: #c35c18;
+}
+section {
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+  width: 100%;
+  background: #ffffff;
+}
+input[type=text],
+textarea {
+  box-sizing: border-box;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid #dcdcdc;
+  line-height: 16px;
+  padding: 4px 8px;
+  min-width: 30px;
+  vertical-align: middle;
+}
+input[type=text].error,
+textarea.error {
+  border-color: #d99f88;
+  color: #d84619;
+}
+/*
+ * 全局公共class定义
+ */
+.showing {
+  position: absolute;
+  z-index: 299;
+  left: 100%;
+  top: 0;
+  display: block;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.show {
+  position: absolute;
+  z-index: 299;
+  left: 0;
+  top: 0;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.hiding {
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+  position: absolute;
+  z-index: 300;
+  left: 50%;
+  top: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.hidden {
+  display: none;
+}
+/* 占位符 */
+.spacer {
+  height: 5px;
+  overflow: hidden;
+}
+/* 公共文字颜色样式定义 */
+.note {
+  color: #999999;
+}
+.stress {
+  color: #da3812;
+}
+.success {
+  color: #309f16;
+}
+.notice,
+.info {
+  color: #164d9f;
+}
+.warn {
+  color: #9f8416;
+}
+.error {
+  color: #d84035;
+}
+.tag {
+  display: inline-block;
+  background: #2864be;
+  color: #ffffff;
+  padding: 2px 6px;
+  margin: 0 3px;
+  line-height: 18px;
+  font-size: 12px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+.tag.disabled {
+  background: #f7f7f7;
+  color: #999999;
+}
+.tag.unselected {
+  background: #f7f7f7;
+  color: #999999;
+}
+.product-line-label {
+  display: inline-block;
+  padding: 3px 0;
+  width: 130px;
+}
+@-webkit-keyframes tohide {
+  0% {
+    left: 0px;
+    z-index: 99999;
+    opacity: 1;
+  }
+  90% {
+    left: 300px;
+    opacity: 0;
+  }
+  100% {
+    z-index: 0;
+    display: none;
+  }
+}
+.tohide {
+  -webkit-animation-name: tohide;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  left: 300px;
+  opacity: 0;
+  z-index: -2;
+}
 .header {
   margin: 10px 0;
   position: relative;
@@ -43,4 +238,150 @@
   padding: 0 15px;
   font-size: 14px;
   cursor: pointer;
+}
+/**
+*
+* 弹出层样式
+*
+**/
+/* 遮罩样式 */
+.popup-modal-mask {
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 9900;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+/* 对话框样式 */
+.popup-modal {
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  top: 50%;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  min-width: 300px;
+  background: #fafafa;
+  margin: -200px 0 0 -150px;
+  border: 5px solid #808080;
+  display: none;
+  /* 对话框头部样式 */
+
+  /* 对话框内容区样式 */
+
+  /* 对话框底部样式 */
+
+}
+.popup-modal .popup-modal-header {
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border-bottom: 1px solid #fdfdfd;
+  padding: 0 10px;
+  height: 29px;
+  /* 关闭按钮 */
+
+}
+.popup-modal .popup-modal-header h4 {
+  font-size: 14px;
+  line-height: 29px;
+}
+.popup-modal .popup-modal-header .closer {
+  border: 1px solid #ffffff;
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  background: url(../images/close.gif) no-repeat center center;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  cursor: pointer;
+}
+.popup-modal .popup-modal-header .closer:hover {
+  border: 1px solid #dcdcdc;
+}
+.popup-modal .popup-modal-content {
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  background: #ffffff;
+  padding: 3px 8px;
+  line-height: 20px;
+  min-height: 50px;
+  overflow: auto;
+}
+.popup-modal .popup-modal-content p {
+  margin: 5px 0;
+}
+.popup-modal .popup-modal-content textarea {
+  box-sizing: border-box;
+  border: 1px solid #dcdcdc;
+  padding: 6px;
+  outline: none;
+  resize: none;
+}
+.popup-modal .popup-modal-footer {
+  border-top: 1px solid #fdfdfd;
+  padding: 5px 6px;
+  text-align: right;
+}
+.popup-modal .popup-modal-footer .btn {
+  border: 1px solid #dcdcdc;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  background: #fafafa;
+  margin: 0 5px;
+  padding: 0 6px;
+  color: #333333;
+  line-height: 24px;
+  text-align: center;
+  min-width: 50px;
+  vertical-align: middle;
+}
+.popup-modal .popup-modal-footer .btn:hover {
+  border: 1px solid #cacaca;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #ededed;
+}
+.popup-modal .popup-modal-footer .btn:hover {
+  background: #ededed;
+  border: 1px solid #cacaca;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+#loading-box {
+  position: fixed;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 24px;
+  margin: -12px 0 0 -50px;
+  text-align: center;
+  z-index: 2012122323;
+  -webkit-transition: all 0.218s ease-in-out;
+}
+#loading-box .loading-box {
+  display: inline-block;
+  border-radius: 12px;
+  height: 24px;
+  padding: 0 15px;
+  background: #1f1f1f;
+  color: #ffffff;
+  line-height: 24px;
+  font-size: 12px;
+  min-width: 100px;
+  position: relative;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+  font-family: 'Microsoft Yahei';
 }

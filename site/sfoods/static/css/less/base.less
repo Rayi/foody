@@ -1,0 +1,181 @@
+@-webkit-keyframes circleEndless{
+
+    0%{
+        -webkit-transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+body {
+    font-size: 12px;
+    color: @baseColor;
+    line-height: 1.5;
+    font-family: Tahoma, 'Microsoft Yahei';
+}
+
+/*
+ * 清楚浮动样式定义 
+ */
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix { display: inline-table; }
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */
+
+.circless {
+    -webkit-animation-name:  circleEndless;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-iteration-count:infinite;
+}
+
+
+/*
+ * 基础UI样式和动画定义
+ */
+a {
+    color: @linkColor;
+    &:hover {
+        text-decoration: underline;
+        color: @linkHoverColor;
+    }
+
+    
+}
+
+section {
+    .transition(all 0.8s);
+    width: 100%;
+    background: @backgroundColor;
+}
+
+input[type=text],
+textarea {
+    .border_box;
+    .border_radius(2px);
+    .bordered;
+    line-height: 16px;
+    padding: 4px 8px;
+    min-width: 30px;
+    vertical-align: middle;
+
+    &.error {
+        border-color: @borderFail;
+        color: @backgroundFail;
+    }
+}
+
+/*
+ * 全局公共class定义
+ */
+.showing {
+    .absolute(299, 100%, 0);
+    display: block;
+    .opacity(0);
+}
+.show {
+    .absolute(299);
+    .opacity(1);
+}
+
+.hiding {
+    .transition(all 0.8s);
+    .absolute(300, 50%);
+    .opacity(0);
+}
+.hidden {
+    display: none;
+}
+/* 占位符 */
+.spacer {
+    height: 5px;
+    overflow: hidden;
+}
+
+/* 公共文字颜色样式定义 */
+.note {
+    color: @basePostscript;
+}
+.stress {
+    color: @baseStrong;
+}
+.success {
+    color: @baseSuccess;
+}
+.notice,
+.info {
+    color: @baseNotice;
+}
+.warn {
+    color: @baseWarning;
+}
+.error {
+    color: @baseFail;
+}
+
+
+.tag {
+    display:inline-block;
+    background:@backgroundInfo;
+    color:@baseLight;
+    padding:2px 6px;
+    margin:0 3px;
+    line-height:18px;
+    font-size:12px;
+    .border_radius();
+
+    &.disabled {
+        background:@backgroundLightDark;
+        color:@basePostscript;
+    }
+
+    &.unselected {
+        background:@backgroundLightDark;
+        color:@basePostscript;
+    }
+}
+
+.product-line-label {
+    display:inline-block;
+    padding:3px 0;
+    width:130px;
+}
+
+
+@-webkit-keyframes tohide {
+    0% {
+        left:0px;
+        z-index:99999;
+        opacity:1;
+    }
+
+    90% {
+        left:300px;
+        opacity:0;
+    }
+
+    100% {
+        z-index:0;
+        display:none;
+    }
+}
+
+.tohide {
+    -webkit-animation-name: tohide;
+     -webkit-animation-duration: 1s;
+     -webkit-animation-iteration-count:1;
+     left:300px;
+     opacity:0;
+     z-index:-2;
+}
+

@@ -1,3 +1,9 @@
+@import "color";
+@import "mixed";
+
+/* 基础样式 */
+@import "base";
+
 .header {
     margin:10px 0;
     position:relative;
@@ -49,4 +55,145 @@
     padding:0 15px;
     font-size:14px;
     cursor:pointer;
+}
+
+
+
+
+/**
+*
+* 弹出层样式
+*
+**/
+
+/* 遮罩样式 */
+.popup-modal-mask {
+    background: rgba(0,0,0,0.2);
+    .fixed(9900, 0, 0);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+/* 对话框样式 */
+.popup-modal {
+    .fixed(9999, 50%, 50%);
+    .box_shadow(0 0 15px rgba(0,0,0, 0.5));
+    min-width: 300px;
+    background: #fafafa;
+    margin: -200px 0 0 -150px;
+    border: 5px solid #808080;
+    display: none;
+
+    /* 对话框头部样式 */
+    
+    .popup-modal-header {
+        .box_shadow(0 2px 5px rgba(0,0,0, 0.1));
+        position: relative;
+        border-bottom: 1px solid #fdfdfd;
+        padding: 0 10px;
+        height: 29px;
+
+        h4 {
+            font-size: 14px;
+            line-height: 29px;
+        }
+
+        /* 关闭按钮 */
+        .closer {
+            .bordered(#ffffff);
+            position: absolute;
+            right: 5px;
+            top: 3px;
+            background: url(../images/close.gif) no-repeat center center;
+            width: 20px;
+            height: 20px;
+            margin: 0;
+            cursor: pointer;
+
+            &:hover {
+                .bordered();
+            }
+        }
+    }
+
+    /* 对话框内容区样式 */
+    .popup-modal-content {
+        border-top: 1px solid @borderColor;
+        border-bottom: 1px solid @borderColor;
+        background: @backgroundColor;
+        padding: 3px 8px;
+        line-height: 20px;
+        min-height: 50px;
+        overflow: auto;
+
+        p {
+            margin: 5px 0;
+        }
+
+        textarea {
+            .border_box();
+            .bordered();
+            padding: 6px;
+            outline: none;
+            resize: none;
+        }
+    }
+
+    /* 对话框底部样式 */
+    .popup-modal-footer {
+        border-top: 1px solid #fdfdfd;
+        padding: 5px 6px;
+        text-align: right;
+
+        .btn {
+            .bordered();
+            .border_radius(2px);
+            background: #fafafa;
+            margin: 0 5px;
+            padding: 0 6px;
+            color: #333333;
+            line-height: 24px;
+            text-align: center;
+            min-width: 50px;
+            vertical-align: middle;
+
+            &:hover {
+                .bordered(#cacaca);
+                .box_shadow(0 0 5px rgba(0,0,0, 0.2));
+                background: #ededed;
+            }
+        }
+    }
+}
+.popup-modal .popup-modal-footer .btn:hover {
+    background:#ededed;
+    border:1px solid #cacaca;
+    box-shadow:0 0 5px rgba(0,0,0, 0.2);
+}
+#loading-box {
+    position:fixed;
+    display:inline-block;
+    top:50%;
+    left:50%;
+    width:100px;
+    height:24px;
+    margin: -12px 0 0 -50px;
+    text-align:center;
+    z-index:2012122323;
+    -webkit-transition:all 0.218s ease-in-out;
+}
+#loading-box .loading-box {
+    display:inline-block;
+    border-radius:12px;
+    height:24px;
+    padding:0 15px;
+    background:#1f1f1f;
+    color:#ffffff;
+    line-height:24px;
+    font-size:12px;
+    min-width:100px;
+    position:relative;
+    box-shadow:0 0 5px rgba(255,255,255,0.6);
+    font-family:'Microsoft Yahei';
 }

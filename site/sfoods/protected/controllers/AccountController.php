@@ -40,6 +40,13 @@ class AccountController extends Controller
     {
         $this->assign("name", "leiyi");
 
+        if(is_null($this->user)) {
+            $this->message('请先登录后再访问！');
+        }
+        $orders = Orders::model()->findAllByAttributes(array(
+            "status" => array(1,2,3,4),
+        ));
+        $this->assign('orders', $orders);
         $this->display('account/page/profile.tpl');
     }
 }

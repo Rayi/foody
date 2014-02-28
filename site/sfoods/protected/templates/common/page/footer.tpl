@@ -34,7 +34,31 @@
 <script type="text/javascript" src="/static/js/unslider.js"></script>
 <script type="text/javascript" src="/static/js/common.js"></script>
 <script type="text/javascript" src="/static/js/juicer-min.js"></script>
-
+<div class="popup-modal-mask"></div>
+<script type="text/template" id="popup-modal-tpl">
+    <div class="popup-modal" id="${id}">
+        <div class="popup-modal-header">
+            <h4>${title}</h4>
+            <span class="closer"></span>
+        </div>
+        <div class="popup-modal-content">
+            $${html}
+        </div>
+        {@if hideFooter === false }
+        <div class="popup-modal-footer">
+        {@else}
+        <div class="popup-modal-footer" style="display:none;">
+        {@/if}
+        {@if btns.length > 0 }
+            {@each btns as btn,index}
+                <a href="#" class="btn" data-btn-index="${index}">123</a>
+            {@/each}
+        {@else}
+            <a href="#" class="btn btn-confirm">确定</a><a href="#" class="btn btn-cancel">取消</a>
+        {@/if}
+        </div>
+    </div>
+</script>
 <script>
 console.log();
 // seajs 的简单配置

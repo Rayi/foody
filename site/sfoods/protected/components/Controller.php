@@ -21,6 +21,8 @@ class Controller extends CController
 	 */
 	public $breadcrumbs=array();
 
+    protected $user = null;
+
 	protected $request=null;
 	protected $curl = null;
 
@@ -38,7 +40,20 @@ class Controller extends CController
         $action_id = isset(Yii::app()->controller->action)?Yii::app()->controller->action->id:"";
         $module_id = $controller_id;
 
-        
+        $login_id = isset($_SESSION['lgid'])?$_SESSION['lgid']:"";
+        $login_user = isset($_SESSION['lgusr'])?$_SESSION['lgusr']:"";
+
+        if($login_id !== "") {
+            $this->user = Users::model()->findByPk($login_id);
+        }
+        $this->user = $this->toArray(Users::model()->findByPk(1));
+
+        $contacts = $this->toArray(Contacts::model()->findAllByAttributes(array(
+            "uid" => 1
+        )));
+        $this->user['contacts'] = $contacts;
+
+        $this->assign('user', $this->user);
     }
 
     public function filterAdminOnly($filterChain){
@@ -62,6 +77,10 @@ class Controller extends CController
 
         // this must return true if want continue action
         return true;
+    }
+
+    public function loginCheck(){
+        return $this->user;
     }
 
 	/**

@@ -397,3 +397,9 @@
   line-height: 40px;
   margin: 0 0 0 20px;
 }
+.about {
+  line-height: 24px;
+  font-size: 14px;
+  color: #333333;
+  margin: 50px 0;
+}

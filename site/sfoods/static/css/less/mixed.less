@@ -1,0 +1,81 @@
+.background(@from, @to) {
+    background-color: @from;
+    background-image: -moz-linear-gradient(top, @from, @to);
+    background-image: -ms-linear-gradient(top, @from, @to);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @from), color-stop(100%, @to));
+    background-image: -webkit-linear-gradient(top, @from, @to);
+    background-image: -o-linear-gradient(top, @from, @to);
+    background-image: linear-gradient(top, @from, @to);
+}
+
+.background_hor(@from, @to) {
+    background-color: @from;
+    background-image: -moz-linear-gradient(left, @from, @to);
+    background-image: -ms-linear-gradient(left, @from, @to);
+    background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0%, @from), color-stop(100%, @to));
+    background-image: -webkit-linear-gradient(left, @from, @to);
+    background-image: -o-linear-gradient(left, @from, @to);
+    background-image: linear-gradient(left, @from, @to);
+}
+
+
+.border_radius(@radius:2px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.border_box() {
+    box-sizing: border-box;
+}
+
+.bordered(@color: @borderColor) {
+    border: 1px solid @color;
+}
+
+
+
+.transition(@default: all 0.5s) {
+    -webkit-transition: @arguments;
+    -moz-transition: @arguments;
+    -o-transition: @arguments;
+    transition: @arguments;
+}
+
+.absolute(@zindex: 100, @left: 0, @top: 0){
+    position: absolute;
+    z-index: @zindex;
+    left: @left;
+    top: @top;
+}
+
+.fixed(@zindex: 100, @left: 0, @top: 0){
+    position: fixed;
+    z-index: @zindex;
+    left: @left;
+    top: @top;
+}
+
+.opacity(@opacity: 0){
+    -moz-opacity:@opacity;
+    opacity: @opacity;
+}
+
+.box_shadow(@default: 0 0 0 rgba(255,255,255,0)) {
+    -webkit-box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    -o-box-shadow: @arguments;
+    box-shadow: @arguments;
+}
+.inset_box_shadow(@default: 0 0 0 rgba(255,255,255,0)) {
+    -webkit-box-shadow: inset @arguments;
+    -moz-box-shadow: inset @arguments;
+    -o-box-shadow: inset @arguments;
+    box-shadow: inset @arguments;
+}
+
+
+
+
+
