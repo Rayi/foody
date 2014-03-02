@@ -27,6 +27,7 @@ class CartController extends Controller
         if(count($items) < 1) {
             $this->error(400, '无法获取到购物车数据!');
         }
+        //$this->dump($cookies);
 
         $order = new Orders();
         $order->status = 0; // 0表示初创建 1表示信息已提交等待确认 2表示确认等待派送 3表示派送完毕已收款 40表示订单无效 41表示用户主动取消 60表示恶意订单 
