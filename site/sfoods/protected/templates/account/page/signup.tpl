@@ -19,7 +19,7 @@
                     <label>验证码</label>
                     <input type="text" placeholder="输入收到的验证码" /> <a href="#" class="send-code">发送验证码</a>
                 </div>
-                <div class="signup-btn confirm-signup">注册帐号</div>
+                <div class="signup-btn confirm-signup">注册帐号</div> <a href="/signin" class="goto-signin">已有帐号，立刻登录</a>
             </div>
         </div>
         <div class="col-md-3">

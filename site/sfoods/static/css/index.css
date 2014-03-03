@@ -126,6 +126,15 @@
   height: 20px;
   text-align: center;
 }
+.cart ul .btn {
+  border-radius: 2px 0 0 2px;
+  padding: 0 3px;
+  width: 22px;
+}
+.cart ul .btn-add {
+  border-radius: 0 2px 2px 0;
+  border-left: none;
+}
 .cart p {
   margin: 0;
 }
@@ -212,6 +221,7 @@
   font-size: 14px;
   color: #ffffff;
   text-align: center;
+  cursor: pointer;
 }
 .foods .food-list .new-item .inner {
   background: #ffffff url(/static/images/new.png) no-repeat right top;
@@ -402,4 +412,10 @@
   font-size: 14px;
   color: #333333;
   margin: 50px 0;
+}
+.goto-signin {
+  color: #ffffff;
+  padding: 0 2px;
+  margin: 0 10px;
+  text-decoration: underline;
 }

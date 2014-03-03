@@ -57,7 +57,7 @@
                 {@each list as item,index}
                 <li data-id="${item.id}">
                     <span class="name">${item.name}</span>
-                    <span class="price">￥${item.price}.00</span> x <span class="item-count">${item.count}</span> <span data-cmd="item-sub" class="btn btn-default">-</span><span data-cmd="item-add" class="btn btn-default">+</span>
+                    <span class="price">￥${item.price}.00</span> x <span class="item-count">${item.count}</span> <span data-cmd="item-sub" class="btn btn-default">-</span><span data-cmd="item-add" class="btn btn-default btn-add">+</span>
                 </li>
                 {@/each}
                 </script>

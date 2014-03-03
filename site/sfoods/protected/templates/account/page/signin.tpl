@@ -15,7 +15,7 @@
                     <label>密码</label>
                     <input type="text" placeholder="输入你的帐号密码" />
                 </div>
-                <div class="signin-btn">登录</div><div class="signup-btn">注册</div>
+                <div class="signin-btn">登录</div><a class="signup-btn" href="/signup">注册</a>
             </div>
         </div>
         <div class="col-md-5">

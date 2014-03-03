@@ -46,12 +46,12 @@ class Controller extends CController
         if($login_id !== "") {
             $this->user = Users::model()->findByPk($login_id);
         }
-        $this->user = $this->toArray(Users::model()->findByPk(1));
+        // $this->user = $this->toArray(Users::model()->findByPk(1));
 
-        $contacts = $this->toArray(Contacts::model()->findAllByAttributes(array(
-            "uid" => 1
-        )));
-        $this->user['contacts'] = $contacts;
+        // $contacts = $this->toArray(Contacts::model()->findAllByAttributes(array(
+        //     "uid" => 1
+        // )));
+        // $this->user['contacts'] = $contacts;
 
         $this->assign('user', $this->user);
     }

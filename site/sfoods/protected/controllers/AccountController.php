@@ -41,7 +41,9 @@ class AccountController extends Controller
         $this->assign("name", "leiyi");
 
         if(is_null($this->user)) {
-            $this->message('请先登录后再访问！');
+            //$this->message('请先登录后再访问！');
+            $this->request->redirect('/signup');
+            exit;
         }
         $orders = Orders::model()->findAllByAttributes(array(
             "status" => array(1,2,3,4),

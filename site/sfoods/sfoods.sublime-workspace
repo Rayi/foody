@@ -1,0 +1,470 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Ass",
+				"assign"
+			],
+			[
+				"order",
+				"order_id"
+			],
+			[
+				"or",
+				"orderId"
+			],
+			[
+				"item",
+				"itemId"
+			],
+			[
+				"car",
+				"cartItems"
+			],
+			[
+				"con",
+				"controller_id"
+			],
+			[
+				"ass",
+				"assign"
+			],
+			[
+				"action",
+				"action_id"
+			],
+			[
+				"cont",
+				"controller_id"
+			],
+			[
+				"re",
+				"retJson"
+			],
+			[
+				"api",
+				"api_url"
+			],
+			[
+				"preg",
+				"preg_match_all"
+			],
+			[
+				"so",
+				"soapclient"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "地址：珠海市唐家湾高新区科技创新海岸魅族科技楼 \n电话：400-788-3333/612 0323 \n邮编：519 085 \n收件人：黄小影 ",
+			"settings":
+			{
+				"buffer_size": 71,
+				"line_ending": "Unix",
+				"name": "地址：珠海市唐家湾高新区科技创新海岸魅族科技楼"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/rayi/Github/foody/site/sfoods/protected/config/config.php",
+		"/Users/rayi/Github/foody/site/sfoods/protected/templates/common/page/message.tpl",
+		"/Users/rayi/Github/foody/site/sfoods/protected/templates/common/page/header.tpl",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/static/js/page/my/chart.js",
+		"/Users/rayi/Github/foody/site/sfoods/protected/models/Contacts.php",
+		"/Users/rayi/Github/foody/site/sfoods/protected/templates/account/page/profile.tpl",
+		"/Users/rayi/Github/foody/site/sfoods/protected/controllers/AccountController.php",
+		"/Users/rayi/Github/foody/site/sfoods/static/css/less/common.less",
+		"/Users/rayi/Github/foody/site/sfoods/static/js/modal.js",
+		"/Users/rayi/Github/foody/site/sfoods/protected/modules/api/controllers/CartController.php",
+		"/Users/rayi/Github/foody/site/sfoods/static/js/site.index.main.js",
+		"/Users/rayi/Github/foody/site/sfoods/static/js/cart.info.main.js",
+		"/Users/rayi/Github/foody/site/sfoods/protected/controllers/OrderController.php",
+		"/Users/rayi/Github/foody/site/sfoods/protected/controllers/CartController.php",
+		"/Users/rayi/Github/foody/site/sfoods/protected/templates/order/page/detail.tpl",
+		"/Users/rayi/Github/foody/site/sfoods/static/js/account.profile.main.js",
+		"/Users/rayi/百度云同步盘/MyDocs/sfoods.sql",
+		"/Volumes/leiyi/adoc/fex/weekly/dp/lightapp_performance/2014-02-21.md",
+		"/Users/rayi/Github/foody/site/sfoods/protected/components/Lang.php",
+		"/Users/rayi/Github/foody/site/sfoods/protected/components/Controller.php",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/static/css/mixed.less",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/static/css/modal.less",
+		"/Users/rayi/Github/foody/site/sfoods/_grunt/Gruntfile.js",
+		"/Users/rayi/Github/foody/site/sfoods/protected/templates/common/page/footer.tpl",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/static/css/hunter.less",
+		"/Users/rayi/Github/foody/site/sfoods/static/css/less/mixed.less",
+		"/Users/rayi/Github/foody/site/sfoods/static/css/less/index.less",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/static/css/modal.css",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/static/js/modal.js",
+		"/Users/rayi/Github/foody/site/sfoods/protected/templates/cart/page/finish.tpl",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/common/components/Mail.php",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/common/components/Logs.php",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/common/components/BaeMail.php",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/common/components/BaseFuncs.php",
+		"/Volumes/leiyi/adoc/fex/weekly/dp/lightapp_performance/2013-02-28.md",
+		"/Users/rayi/Github/foody/site/sfoods/protected/templates/cart/page/order.tpl",
+		"/Users/rayi/Github/foody/site/sfoods/static/js/cart.index.main.js",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/protected/components/Controller.php",
+		"/Users/rayi/Github/foody/site/sfoods/static/js/cart.js",
+		"/Users/rayi/Github/foody/site/sfoods/static/js/site.main.js",
+		"/Users/rayi/Github/foody/site/sfoods/protected/templates/home/page/index.tpl",
+		"/Users/rayi/Github/foody/site/sfoods/static/js/items.js",
+		"/Users/rayi/Github/foody/site/sfoods/protected/templates/cart/page/index.tpl",
+		"/Users/rayi/Github/foody/site/sfoods/static/js/cart.main.js",
+		"/Users/rayi/Github/foody/site/sfoods/protected/config/main.php",
+		"/Users/rayi/Github/foody/site/sfoods/static/js/main.js",
+		"/Users/rayi/Github/foody/site/sfoods/static/js/index.js",
+		"/Users/rayi/Github/foody/site/sfoods/protected/models/Item.php",
+		"/Users/rayi/Github/foody/site/sfoods/protected/models/ItemType.php",
+		"/Users/rayi/Github/foody/site/sfoods/protected/models/Users.php",
+		"/Users/rayi/Github/foody/site/sfoods/protected/models/UserVerify.php",
+		"/Users/rayi/Github/foody/site/sfoods/protected/modules/api/controllers/ItemController.php",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/protected/models/MonkDevice.php",
+		"/Users/rayi/work/hunter/src/hunter/hunter/build/monk",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/protected/models/Rules.php",
+		"/Volumes/leiyi/adoc/fex/weekly/dp/_done/errorhunter/2014-01-03.md",
+		"/Users/rayi/work/fex/dps/views/authority/page/request.tpl",
+		"/Users/rayi/work/test/angular-phonecat-master/app/lib/angular/angular.js",
+		"/Users/rayi/work/fex/fex.baidu.com/fex/fe.less",
+		"/Users/rayi/work/test/angular-phonecat-master/app/lib/angular/angular.min.js",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/protected/config/main.php",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/protected/config/config.log.php",
+		"/Users/rayi/Downloads/OccMHAOtaYDjHjWnodBh.sql",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/protected/controllers/MyController.php",
+		"/Users/rayi/Github/foody/site/sfoods/.htaccess",
+		"/Users/rayi/Github/foody/site/sfoods/protected/templates/common/tpl/food-item.tpl",
+		"/Users/rayi/Github/foody/site/sfoods/protected/templates/home/page/about.tpl",
+		"/Users/rayi/Github/foody/list.html",
+		"/Users/rayi/Github/foody/site/sfoods/static/js/ep.js",
+		"/Users/rayi/Github/foody/site/sfoods/static/sea-modules/eventproxy.js",
+		"/Users/rayi/Github/foody/site/sfoods/protected/templates/common/page/layout.tpl",
+		"/Users/rayi/Github/foody/site/sfoods/protected/templates/account/page/getpw.tpl",
+		"/Users/rayi/Github/foody/getpasswd.html",
+		"/Users/rayi/Github/foody/order.html",
+		"/Users/rayi/Github/foody/profile.html",
+		"/Users/rayi/Github/foody/signin.html",
+		"/Users/rayi/Github/foody/signup.html",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/common/components/FetchUrl.php",
+		"/Users/rayi/Github/foody/site/sfoods/protected/components/FetchUrl.php",
+		"/Users/rayi/Github/foody/site/sfoods/protected/controllers/HomeController.php",
+		"/Users/rayi/work/test/angular-phonecat-master/app/index.html",
+		"/Users/rayi/Github/foody/about.html",
+		"/Users/rayi/Github/foody/cart.html",
+		"/Users/rayi/Github/foody/static/css/less/index.less",
+		"/Users/rayi/work/hunter/bae/8.8.8/protected/config/config.php",
+		"/Users/rayi/work/hunter/src/hunter/hunter/site/index.php",
+		"/Users/rayi/work/fex/fex.baidu.com/index.php",
+		"/Users/rayi/.bash_profile",
+		"/Users/rayi/work/hunter/src/hunter/hunter/build/sandbox",
+		"/Users/rayi/Desktop/test.css",
+		"/Users/rayi/Desktop/log-20140209",
+		"/Users/rayi/百度云同步盘/MyDocs/雷毅_for_FEDev.md",
+		"/Users/rayi/Desktop/mhj.text",
+		"/Volumes/webspeed/dps-dev/views/authority/static/request/request.less",
+		"/Volumes/webspeed/dps-dev/views/authority/static/request/request.js",
+		"/Volumes/webspeed/dps-dev/views/authority/page/request.tpl",
+		"/Users/rayi/Desktop/info.text",
+		"/Users/rayi/work/fex/dps/views/monk/widget/bar/bar.js",
+		"/Users/rayi/work/fex/dps/application/controllers/customize.php",
+		"/Users/rayi/Github/foody/site/sfoods/protected/extensions/CSmarty.php",
+		"/Users/rayi/Github/foody/output/food-map.json",
+		"/Users/rayi/Github/foody/fis-conf.js",
+		"/Volumes/webspeed/dps-dev/application/config/dps_config.php",
+		"/Volumes/webspeed/dps-dev/application/controllers/customize.php",
+		"/Volumes/webspeed/dps-dev/views/monk/widget/bar/bar.js",
+		"/Volumes/webspeed/dps-dev/views/monk/widget/line/line2.js",
+		"/Volumes/webspeed/dps-dev/views/monk/widget/line/line.js",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/protected/lib/uic/UserRemoteService.php",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/protected/lib/uic/EmailgroupRemoteImplService.php",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/protected/lib/uic/wsdl/UserService.wsdl",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/protected/lib/uic/wsdl/EmailgroupService.wsdl",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/protected/lib/uic/Uic.php",
+		"/Volumes/webspeed/dps-dev/application/libraries/nusoap/nusoap.php",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/protected/config/config.php",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/protected/lib/uic/DepartmentRemoteService.php",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/protected/lib/uic/wsdl2php.php",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/protected/lib/uic/DTOs.php",
+		"/Users/rayi/work/bae/monkeyhunter/5.5.5/protected/lib/uic/UserDTO.php",
+		"/Users/rayi/Downloads/nusoap-0.9.5/samples/wsdlclient1.php",
+		"/Users/rayi/Downloads/nusoap-0.9.5/lib/nusoap.php",
+		"/Users/rayi/Github/foody/site/sfoods/protected/controllers/SiteController.php",
+		"/Users/rayi/Github/foody/output/index.html",
+		"/Volumes/webspeed/dps-dev/index.php",
+		"/Volumes/webspeed/dps-dev/application/libraries/smarty.php",
+		"/Volumes/webspeed/dps-dev/views/monk/static/customize/customize.js",
+		"/Users/rayi/Downloads/nusoap-0.9.5/samples/wsdlclient2.php",
+		"/Users/rayi/Downloads/nusoap-0.9.5/samples/wsdlclient3.php",
+		"/Users/rayi/Downloads/nusoap-0.9.5/samples/wsdlclient3b.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"onConfirm",
+			"AceTemplate",
+			"showModal",
+			"beforeAction",
+			"getParam",
+			"cart_item",
+			"cart.changed",
+			"z",
+			"toArray",
+			"food.addtoart",
+			"$rootScope.$$phase",
+			"$setViewValue",
+			"deferListener",
+			"$apply",
+			"$applt",
+			".html(",
+			".html",
+			"。html",
+			"innerHTML",
+			"HTML",
+			"html",
+			"。inner",
+			"interval",
+			"setter",
+			"$watch",
+			"￥watch",
+			"locals.$scope[identifier] = instance",
+			"change",
+			".directive",
+			"directive(",
+			"directive",
+			"ngRepeatDirective",
+			"ngRepeat",
+			"repeat",
+			"ng-repeat",
+			"$InterpolateProvider",
+			"{{",
+			"controller",
+			"ng-controller",
+			"ng-app",
+			"chapter",
+			"WSDL",
+			"'result'",
+			"in buildVal, return",
+			"nusoap_parser(",
+			"parseResponse(",
+			"nusoap_parser(",
+			"nusoap_parser",
+			"soapresponse",
+			"get_soapbody",
+			"get_soapbody\nget_soapbody\nget_soapbody",
+			"get_soapbody",
+			"parseResponse",
+			"$this->parseResponse",
+			"responseData",
+			"send(",
+			"call(",
+			"DTO",
+			"found root struct",
+			"in buildVal",
+			"debug_str",
+			"appendDebug",
+			"debugLevel",
+			"setGlobalDebugLevel",
+			"globalDebugLevel",
+			"debugLevel",
+			"debug($",
+			"debug(",
+			"debug",
+			"$this->xml",
+			"nusoap_parser",
+			"get_soapbody",
+			"parseResponse",
+			"send(",
+			"call(",
+			"ISO-8859-1",
+			"call(",
+			"charset",
+			"ISO-8859-1",
+			"charset",
+			"params",
+			"requestHeaders",
+			"header",
+			"serializeEnvelope",
+			"header",
+			"Soap",
+			"So'a'p",
+			"8018",
+			"borderWidth",
+			"color",
+			"getDomain",
+			"smarty_compiler_widget",
+			"init",
+			"caret",
+			"nav",
+			"@",
+			"last"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"UTF-8"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 71,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								71,
+								71
+							]
+						],
+						"settings":
+						{
+							"auto_name": "地址：珠海市唐家湾高新区科技创新海岸魅族科技楼",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "sfoods.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
